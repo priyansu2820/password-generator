@@ -1,0 +1,227 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1a2a6c, #2b5876);
+    color: #f0f8ff;
+}
+
+.div-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: 20px auto;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.div-container.dark-mode {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+label.dark-mode {
+    color: #f0f8ff;
+}
+
+input[type="number"],
+#password,
+#userName {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: #fff;
+    color: #333;
+}
+
+input[type="number"]:focus,
+#password:focus,
+#userName:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="number"].dark-mode,
+#password.dark-mode,
+#userName.dark-mode {
+    background-color: #484c52;
+    color: #f0f8ff;
+    border: 1px solid #666;
+}
+
+.input-checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.input-checkbox-container label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.credit {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: auto;
+    padding: 20px 0;
+    transition: color 0.3s ease;
+}
+
+.credit.dark-mode {
+    color: #bbb;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+#darkModeToggle {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+#darkModeToggle.dark-mode {
+    color: #f0f8ff;
+}
+
+#userName {
+    display: none;
+}
+
+/* ... your existing CSS ... */
+
+/* Button Hover Animation */
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus Animation */
+input[type="number"]:focus,
+#password:focus,
+#userName:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow on focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Checkbox Animation */
+input[type="checkbox"] {
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+/* Dark Mode Toggle Animation */
+#darkModeToggle {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.2); /* Slight scale on hover */
+}
+
+/* Dark Mode Transition */
+body, .div-container, input[type="number"], #password, #userName, label, .credit {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ... your existing CSS ... */
+
+/* Particle Effect (Smooth Animation) */
+.particle {
+    position: fixed;
+    pointer-events: none;
+    animation: particle-effect-smooth-enhanced 0.8s ease-out; // Smoother and slightly longer animation
+}
+
+@keyframes particle-effect-smooth-enhanced {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(Math.random() * 70 - 35 + "px", Math.random() * 70 - 35 + "px") scale(0); // Slightly more movement
+        opacity: 0;
+    }
+}

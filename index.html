@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <button id="darkModeToggle">🌙</button>
+    </div>
+    <div class="div-container">
+        <label>
+            User Name: <input type="checkbox" id="useName">
+        </label>
+        <input type="text" id="userName" placeholder="Your Name" style="display: none;">
+
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" value="12" min="8">
+
+        <div class="input-checkbox-container">
+            <label>Uppercase: <input type="checkbox" id="uppercase" checked></label>
+            <label>Lowercase: <input type="checkbox" id="lowercase" checked></label>
+        </div>
+
+        <div class="input-checkbox-container">
+            <label>Digits: <input type="checkbox" id="digits" checked></label>
+            <label>Symbols: <input type="checkbox" id="symbols" checked></label>
+        </div>
+
+        <input type="text" id="password" readonly>
+
+        <button onclick="generatePassword()">Generate Password</button>
+    </div>
+    <p class="credit">
+        Design By - Priyansu Kundu <br>
+        Priyansumimi Kundu<br>
+    </p>
+    <script src="script.js"></script>
+</body>
+</html>
