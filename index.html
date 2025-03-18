@@ -3,9 +3,10 @@
 <head>
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div class="dark-mode-toggle">
+    <div class="background-elements"></div> <div class="dark-mode-toggle">
         <button id="darkModeToggle">🌙</button>
     </div>
     <div class="div-container">
@@ -23,17 +24,24 @@
         </div>
 
         <div class="input-checkbox-container">
-            <label>Digits: <input type="checkbox" id="digits" checked></label>
+            <label>Digits: <input type="checkbox" id="digits"></label>
             <label>Symbols: <input type="checkbox" id="symbols" checked></label>
         </div>
 
-        <input type="text" id="password" readonly>
+        <div class="password-container">
+            <input type="text" id="password" readonly>
+            <button onclick="generatePassword()" class="regenerate-button">
+                <i class="fas fa-redo-alt"></i>
+            </button>
+        </div>
 
         <button onclick="generatePassword()">Generate Password</button>
     </div>
     <p class="credit">
         Design By - Priyansu Kundu <br>
-        Priyansumimi Kundu<br>
+        Priyansu Kundu<br>
+    </span>
+    <span class="copyright">© All Rights Reserved 2025</span>
     </p>
     <script src="script.js"></script>
 </body>
