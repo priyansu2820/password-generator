@@ -7,7 +7,7 @@ body {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #333;
     transition: background 0.3s ease, color 0.3s ease;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body.dark-mode {
@@ -154,12 +154,12 @@ button:hover {
     font-size: 12px;
     color: #888;
     text-align: center;
-    margin-top: auto;
     padding: 20px 0;
     transition: color 0.3s ease;
     display: flex;
-    flex-direction: column; /* Change to column */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
 }
 
 .credit.dark-mode {
@@ -217,7 +217,7 @@ button:hover {
 .copyright {
     font-size: 20px;
     text-align: center;
-    margin-top: 10px; /* Add space between credit and copyright */
+    margin-top: 10px;
 }
 
 .credit-text {
@@ -240,4 +240,11 @@ button:hover {
     font-size: 16px;
     border: 1px solid #eef5f2;
     border-radius: 15px;
-    background-
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.navigation-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    text-align:
