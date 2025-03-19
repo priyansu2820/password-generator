@@ -159,7 +159,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: auto;
 }
 
 .credit.dark-mode {
@@ -215,7 +214,7 @@ button:hover {
 }
 
 .copyright {
-    font-size: 20px;
+    font-size: 12px;
     text-align: center;
     margin-top: 10px;
 }
@@ -240,11 +239,3 @@ button:hover {
     font-size: 16px;
     border: 1px solid #eef5f2;
     border-radius: 15px;
-    background-color: #f0f8ff;
-    color: #333;
-}
-
-.navigation-bar {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px 0;
-    text-align:
