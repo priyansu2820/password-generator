@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     margin: 0;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: #333;
+    color: #060202;
     transition: background 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
 }
@@ -55,7 +55,7 @@ input[type="number"],
     font-size: 16px;
     transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     background-color: #c1efef;
-    color: #855e5e;
+    color: #070000;
 }
 
 input[type="number"]:focus,
