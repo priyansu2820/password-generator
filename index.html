@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="background-elements"></div>
+    <div class="dark-mode-toggle">
+        <button id="darkModeToggle">🌙</button>
+    </div>
+
+    <div class="navigation-bar">
+        <div class="moving-text-container">
+            <span class="moving-text" id="passwordWarning">Do not share this password. "Passwords are like underwear. You see, you should never share them, never hang them on your monitor, and honestly, no one should ever see them.       </div>
+    </div>
+
+    <div class="div-container">
+        <form id="passwordForm">
+            <label>
+                User Name: <input type="checkbox" id="useName">
+            </label>
+            <input type="text" id="userName" placeholder="Your Name" style="display: none;" aria-label="Enter your name">
+
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" value="12" min="8" max="50" aria-label="Password length">
+
+            <fieldset>
+                <legend>Character Sets</legend>
+                <div class="input-checkbox-container">
+                    <label>Uppercase: <input type="checkbox" id="uppercase" checked></label>
+                    <label>Lowercase: <input type="checkbox" id="lowercase" checked></label>
+                </div>
+
+                <div class="input-checkbox-container">
+                    <label>Digits: <input type="checkbox" id="digits"></label>
+                    <label>Symbols: <input type="checkbox" id="symbols" checked></label>
+                </div>
+
+                <label>
+                    <input type="checkbox" id="excludeSimilar">
+                    Exclude Similar Characters (l, 1, O, 0)
+                </label>
+            </fieldset>
+
+            <div class="password-container">
+                <input type="password" id="password" readonly aria-label="Generated password">
+                <button type="button" class="visibility-button" aria-label="Toggle password visibility">
+                    <i id="visibilityIcon" class="fas fa-eye-slash"></i>
+                </button>
+                <button type="button" class="copy-button" aria-label="Copy password to clipboard">
+                    <i class="fas fa-copy"></i>
+                </button>
+                <button type="button" class="regenerate-button" aria-label="Regenerate password">
+                    <i class="fas fa-redo-alt"></i>
+                </button>
+            </div>
+            <div id="passwordStrength" aria-live="polite"></div>
+            <div id="passwordStrengthFeedback"></div>
+            <div id="clipboardConfirmation" style="display: none; text-align: center; margin-top: 10px;">Copied!</div>
+
+            <button type="button" id="generateButton">Generate Password</button>
+
+        </form>
+    </div>
+    <p class="credit">
+        Design By - Priyansu Kundu <br>
+    </p>
+    <span class="copyright">© All Rights Reserved 2025 </span>
+    <script src="script.js"></script>
+</body>
+</html>
